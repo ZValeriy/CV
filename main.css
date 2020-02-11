@@ -3,30 +3,9 @@ body {
     padding: 0;
 }
 
-.content {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.sidebar {
-    width: 35%;
-    background-color: #f7f7f7;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-header {
-    padding: 40px;
-    z-index: 999;
-}
-
 .name__container {
     box-sizing: border-box;
-    padding: 70px 20px 70px 20px;
+    padding: 5vh 5% 5vh 5%;
     background-color: #fff;
     border: 2px solid #000;
     width: 50%;
@@ -49,15 +28,102 @@ header {
     text-align: center;
 }
 
+.circle__container {
+    margin-top: 15px;
+    display: flex;
+    width: 50%;
+    margin-left: 0;
+    flex-direction: row;
+}
+
+.circle {
+    margin-right: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #000;
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .content {
+        width: 80%;
+    }
+}
+
 main {
     margin-top: 60px;
     display: grid;
     grid-template-columns: 35% 65%;
 }
 
+@media screen and (min-width: 661px) {
+    .skills {
+        display: block;
+    }
+
+    .skills-center {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    main {
+        display: block;
+    }
+
+    .circle__container {
+        width: 85%;
+        margin-left: 0;
+    }
+
+    .circle {
+        margin-right: 15px;
+    }
+
+    .name__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .skills {
+        display: none;
+    }
+
+    .skills-center {
+        display: block;
+    }
+}
+
+.content {
+    position: relative;
+    
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 35%;
+    background-color: #f7f7f7;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    padding: 40px;
+    z-index: 999;
+}
+
 .sidebar__content {
-    padding-left: 50px;
-    padding-right: 20px;
+    padding-left: 10%;
+    padding-right: 5%;
 }
 
 .center__content {
@@ -100,4 +166,6 @@ main {
 .block_text {
     color: #656A7B;
     font-size: 20px;
+    line-height: 27px;
 }
+
